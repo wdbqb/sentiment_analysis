@@ -1,12 +1,24 @@
 import streamlit as st
-import pandas as pd
+from sentiment_analysis import generate
 
+# Title
 st.title("Sentiment Analysis")
 st.markdown("Enter some text below and click **Analyse** to get the sentiment.")
-user_input = st.text_area("Analysed Text:")
-if st.button("Analyse"):
-    st.balloons()
 
-if st.button("Analyse"):
-    if not user_input.strip():
-        st.warning("Please enter some text to analyse.")
+
+# text enter area
+user_input = st.text_area("Analysed Text:")
+
+
+#Button to submit the text
+
+if st.button("Analyse Sentiment"):
+    if user_input.strip() != "":
+        try:
+            result = generate(user_input)
+            st.success(f"Sentiment: {result}")
+        except Exception as e:
+            st.error(f"Error: {e}")
+    else:
+        st.warning("Please enter some text to analyze.")
+

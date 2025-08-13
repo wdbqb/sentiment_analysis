@@ -1,38 +1,38 @@
 from google import genai
 from google.genai import types
 
-from src.sentiment_analysis.main import user_input
-
-# define the system instruction
-user_input = 'GOOD JOB'
-system_instruction = """You are an AI assistant specializing in sentiment analysis. Your task is to analyze user input and determine its sentiment, categorizing it as either positive, negative, or neutral."""
-prompt = types.Part.from_text(text=f"""Analyze the following user input and determine its sentiment. Provide the sentiment outcome and the reasoning behind your analysis in JSON format.
-
-User Input:
-{user_input}
-
-
-Output the sentiment analysis in the following JSON format:
-
-```json
-{{
-  \"sentiment\": \"positive | negative | neutral\",
-  \"reasoning\": \"Explanation of why the sentiment was classified as such.\"
-}}
-```
-
-Example:
-
-```json
-{{
-  \"sentiment\": \"positive\",
-  \"reasoning\": \"The user expressed satisfaction with the product and praised its features.\"
-}}
-```""")
 
 
 
-def generate():
+def generate(user_input):
+  # define prompt and system instruction
+
+  system_instruction = """You are an AI assistant specializing in sentiment analysis. Your task is to analyze user input and determine its sentiment, categorizing it as either positive, negative, or neutral."""
+
+  prompt = types.Part.from_text(text=f"""Analyze the following user input and determine its sentiment. Provide the sentiment outcome and the reasoning behind your analysis in JSON format.
+
+  User Input:
+  {user_input}
+
+
+  Output the sentiment analysis in the following JSON format:
+
+  ```json
+  {{
+    \"sentiment\": \"positive | negative | neutral\",
+    \"reasoning\": \"Explanation of why the sentiment was classified as such.\"
+  }}
+  ```
+
+  Example:
+
+  ```json
+  {{
+    \"sentiment\": \"positive\",
+    \"reasoning\": \"The user expressed satisfaction with the product and praised its features.\"
+  }}
+  ```""")
+
   client = genai.Client(
       vertexai=True,
       project="sentiment-analysis-468823",
@@ -82,6 +82,4 @@ def generate():
   print(response.text)
 
   return response.text
-
-generate()
 
