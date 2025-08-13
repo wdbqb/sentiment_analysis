@@ -15,19 +15,19 @@ User Input:
 Output the sentiment analysis in the following JSON format:
 
 ```json
-{
+{{
   \"sentiment\": \"positive | negative | neutral\",
   \"reasoning\": \"Explanation of why the sentiment was classified as such.\"
-}
+}}
 ```
 
 Example:
 
 ```json
-{
+{{
   \"sentiment\": \"positive\",
   \"reasoning\": \"The user expressed satisfaction with the product and praised its features.\"
-}
+}}
 ```""")
 
 
