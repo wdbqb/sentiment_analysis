@@ -1,8 +1,9 @@
 from google import genai
 from google.genai import types
+import json
 
 
-
+user_input = 'good job'
 
 def generate(user_input):
   # define prompt and system instruction
@@ -79,7 +80,16 @@ def generate(user_input):
         model = model,
         contents = contents,
         config = generate_content_config)
+
+  # try:
+  #   result_json = json.loads(response.text)
+  # except json.JSONDecodeError:
+  #   result_json = {"sentiment": "Unknown", "reasoning": "Parsing error"}
   print(response.text)
 
   return response.text
+
+
+
+
 
