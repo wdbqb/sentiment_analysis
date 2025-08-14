@@ -1,5 +1,6 @@
 from google import genai
 from google.genai import types
+
 import json
 from google.cloud import secretmanager
 import os
@@ -62,6 +63,7 @@ def generate(user_input):
 
   client = genai.Client(
       vertexai=True,
+
       project=project_id,
       location="global",
       credentials=credentials
@@ -108,15 +110,13 @@ def generate(user_input):
         contents = contents,
         config = generate_content_config)
 
+
   # try:
   #   result_json = json.loads(response.text)
   # except json.JSONDecodeError:
   #   result_json = {"sentiment": "Unknown", "reasoning": "Parsing error"}
+
   print(response.text)
 
   return response.text
-
-
-
-
 
