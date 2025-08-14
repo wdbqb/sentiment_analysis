@@ -26,4 +26,4 @@ Designed as a fast prototyping exercise to explore and strengthen practical clou
 
 Snapshot
 
-![img.png](img.png)
+![snapshot](Screenshot 2025-08-14 at 9.25.01 PM.png)
