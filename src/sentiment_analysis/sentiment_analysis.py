@@ -1,9 +1,35 @@
 from google import genai
 from google.genai import types
 import json
+from google.cloud import secretmanager
+import os
+from google.oauth2 import service_account
+from google.cloud import storage
+from dotenv import load_dotenv
 
 
-user_input = 'good job'
+#set up the GCP account and project
+load_dotenv()
+
+project_id = os.getenv("project_id", "default-project-id")
+secret_name = os.getenv("secret_name", "default-secret-name")
+bucket_name = os.getenv("bucket_name")
+
+
+secret_client = secretmanager.SecretManagerServiceClient()
+secret_version_name = f"projects/{project_id}/secrets/{secret_name}/versions/latest"
+response = secret_client.access_secret_version(name=secret_version_name)
+secret_payload = response.payload.data.decode("UTF-8")
+SECRET_DATA = json.loads(secret_payload)  # global variable
+credentials = service_account.Credentials.from_service_account_info(
+    SECRET_DATA,
+    scopes=['https://www.googleapis.com/auth/cloud-platform']
+)
+# cloud storage
+
+STORAGE_CLIENT = storage.Client(credentials=credentials)
+BUCKET = STORAGE_CLIENT.get_bucket(bucket_name) if bucket_name else None
+
 
 def generate(user_input):
   # define prompt and system instruction
@@ -36,8 +62,9 @@ def generate(user_input):
 
   client = genai.Client(
       vertexai=True,
-      project="sentiment-analysis-468823",
+      project=project_id,
       location="global",
+      credentials=credentials
   )
 # prompt
   text1 = prompt
