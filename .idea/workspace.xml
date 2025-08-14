@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09362b9f-0ab5-4553-9e11-ecdee4846459" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="09362b9f-0ab5-4553-9e11-ecdee4846459" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +35,7 @@
     "Python.main.executor": "Run",
     "Python.sentiment_analysis.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "add__readme",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/wenruiyi/PycharmProjects/sentiment_analysis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
