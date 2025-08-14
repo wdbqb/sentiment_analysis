@@ -1,6 +1,5 @@
 # Sentiment Analysis App (Streamlit + Gemini API)
-A simple, cloud-ready sentiment analysis application built with Streamlit for the frontend and Google Gemini API for natural language processing.  
-The project is containerised with Docker for easy deployment to services like Google Cloud Run.  
+A simple, cloud-ready sentiment analysis application built with Streamlit for the frontend and Google Gemini API for natural language processing. The project is containerised with Docker for easy deployment to services like Google Cloud Run.  
 
 Designed as a fast prototyping exercise to explore and strengthen practical cloud engineering skills, including containerisation, serverless deployment, and integration of AI services in a production-like workflow.
 
