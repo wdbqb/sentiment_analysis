@@ -11,9 +11,9 @@ from dotenv import load_dotenv
 #set up the GCP account and project
 load_dotenv()
 
-project_id = os.getenv("project_id", "default-project-id")
-secret_name = os.getenv("secret_name", "default-secret-name")
-bucket_name = os.getenv("bucket_name")
+project_id = os.getenv("project_id")
+secret_name = os.getenv("secret_name")
+#bucket_name = os.getenv("bucket_name")
 
 
 secret_client = secretmanager.SecretManagerServiceClient()
@@ -25,10 +25,6 @@ credentials = service_account.Credentials.from_service_account_info(
     SECRET_DATA,
     scopes=['https://www.googleapis.com/auth/cloud-platform']
 )
-# cloud storage
-
-STORAGE_CLIENT = storage.Client(credentials=credentials)
-BUCKET = STORAGE_CLIENT.get_bucket(bucket_name) if bucket_name else None
 
 
 def generate(user_input):
