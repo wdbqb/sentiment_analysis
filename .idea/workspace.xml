@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="09362b9f-0ab5-4553-9e11-ecdee4846459" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sentiment_analysis/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sentiment_analysis/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sentiment_analysis/sentiment_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sentiment_analysis/sentiment_analysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wdbqb&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:wdbqb/sentiment_analysis.git&quot;,
+    &quot;accountId&quot;: &quot;36340e7b-e924-4ef9-b7d5-5e00649c41a1&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -39,7 +51,8 @@
     "Python.main.executor": "Run",
     "Python.sentiment_analysis.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "change__UI",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "change__auth__method",
     "last_opened_file_path": "/Users/wenruiyi/PycharmProjects/sentiment_analysis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,6 +84,8 @@
       <option name="presentableId" value="Default" />
       <updated>1755041356120</updated>
       <workItem from="1755041357143" duration="972000" />
+      <workItem from="1755232840906" duration="5119000" />
+      <workItem from="1755317223267" duration="3732000" />
     </task>
     <servers />
   </component>
